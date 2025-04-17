@@ -1,4 +1,4 @@
-local init = false
-if (not init) then return end
+local active = false
+if (not active) then return end
 
 --[[ . . . ]]
