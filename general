@@ -1,3 +1,4 @@
-task.wait(5)
-workspace:ClearAllChildren()
-print("123test")
+local init = false
+if (not init) then return end
+
+--[[ . . . ]]
