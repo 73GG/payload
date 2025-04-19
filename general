@@ -6,7 +6,7 @@ game:GetService("Players").PlayerAdded:Connect(function(plr)
   repeat task.wait()
   until (plr:IsDescendantOf(game:GetService("Players")))
 
-  plr:SetAttribute("123", 123)
+  plr:SetAttribute("RobloxOverride", false)
 end)
 
 --[[ . . . ]]
