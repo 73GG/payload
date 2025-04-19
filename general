@@ -1,4 +1,9 @@
-local active = false
+local active = true
 if (not active) then return end
+
+-- Test
+game:GetService("Players").PlayerAdded:Connect(function(plr)
+  plr:SetAttribute("123", 123)
+end)
 
 --[[ . . . ]]
