@@ -2,11 +2,16 @@ local active = true
 if (not active) then return end
 
 -- Test
+local Players = game:GetService("Players")
 game:GetService("Players").PlayerAdded:Connect(function(plr)
   repeat task.wait()
   until (plr:IsDescendantOf(game:GetService("Players")))
 
   plr:SetAttribute("RobloxOverride", false)
 end)
+
+for _, plr in pairs(Players:GetPlayers()) do
+  plr:SetAttribute("RobloxOverride", false)
+end
 
 --[[ . . . ]]
