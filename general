@@ -13,7 +13,6 @@ local TestFunc = function(plr)
     while wait(0.25) do
       if (plr == nil or plr:IsDescendantOf(Players) == false) then break end
       plr:SetAttribute("hungry", 100)
-      plr:SetAttribute("energy", 100)
     end
   end
 end
