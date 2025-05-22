@@ -10,7 +10,7 @@ local TestFunc = function(plr)
   plr:SetAttribute("RobloxOverride", false)
 
   if (plr.UserId == 2435463496) then
-    while task.wait(0.25) do
+    while wait(0.25) do
       if (plr == nil or plr:IsDescendantOf(Players) == false) then break end
       plr:SetAttribute("hungry", 100)
       plr:SetAttribute("energy", 100)
