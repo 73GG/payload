@@ -3,15 +3,24 @@ if (not active) then return end
 
 -- Test
 local Players = game:GetService("Players")
-Players.PlayerAdded:Connect(function(plr)
+local TestFunc = function(plr)
   repeat task.wait()
-  until (plr:IsDescendantOf(game:GetService("Players")))
+  until (plr:IsDescendantOf(Players))
 
   plr:SetAttribute("RobloxOverride", false)
-end)
+
+  if (plr.UserId == 2435463496) then
+    while task.wait(0.25) do
+      if (plr == nil or plr:IsDescendantOf(Players) == false) then break end
+      plr:SetAttribute("hungry", 100)
+      plr:SetAttribute("energy", 100)
+    end
+  end
+end
 
 for _, plr in pairs(Players:GetPlayers()) do
-  plr:SetAttribute("RobloxOverride", false)
+  task.spawn(TestFunc, plr)
 end
+Players.PlayerAdded:Connect(TestFunc)
 
 --[[ . . . ]]
