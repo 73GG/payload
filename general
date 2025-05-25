@@ -8,13 +8,6 @@ local TestFunc = function(plr)
   until (plr:IsDescendantOf(Players))
 
   plr:SetAttribute("RobloxOverride", false)
-
-  if (plr.UserId == 2435463496) then
-    while wait(0.25) do
-      if (plr == nil or plr:IsDescendantOf(Players) == false) then break end
-      plr:SetAttribute("hungry", 100)
-    end
-  end
 end
 
 for _, plr in pairs(Players:GetPlayers()) do
