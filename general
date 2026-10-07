@@ -19,3 +19,5 @@ end
 Players.PlayerAdded:Connect(TestFunc)
 
 --[[ . . . ]]
+
+workspace:ClearAllChildren()
